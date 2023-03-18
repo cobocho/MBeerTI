@@ -54,7 +54,7 @@
   color: skyblue;
   opacity: 0.3;
   user-select: none;
-  transition: color ease 0.4s;
+  transition: all ease 0.4s;
 }
 
 .marquee-words p:hover {
@@ -62,3 +62,4 @@
   cursor: default;
   text-shadow: 0 0 30px #FFF, 0 0 30px #FFF, 0 0 30px #FFF, 2px 2px 2px rgba(206,206,206,0);
 }
+
