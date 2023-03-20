@@ -11,15 +11,6 @@ body {
   background-color: #b8e7ff;
 }
 
-section.mug-backdrop {
-  width: 95vw;
-  height: 100%;
-  background-color: rgb(164, 215, 235);
-  margin: 0 2.5vw;
-  position: fixed;
-  bottom: 0;
-}
-
 section.title {
   position: absolute;
   top: 50%;
@@ -159,7 +150,9 @@ section.beer-wrapper .beer .inner .bubble {
   bottom: -80px;
   border: 1px solid rgb(254, 214, 127);
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  transition: all 1s;
 }
+
 
 @keyframes yMove {
   0% {
@@ -186,4 +179,35 @@ section.beer-wrapper .beer .inner .bubble {
   100% {
     transform: translateX(-100px);
   }
+}
+
+.mug-backdrop {
+  width: 95vw;
+  height: 2000px;
+  background-color: rgb(164, 215, 235);
+  margin: 0 2.5vw;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-width: 800px) {
+  section.title h1 {
+    font-size: 24vw;
+  }
+  
+  section.title h2 {
+    font-size: 6vw;
+  }
+
+  section.start-btn-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+
+@keyframes fill {
+  100% {
+    bottom: -5%;
+  }
+}
 }
