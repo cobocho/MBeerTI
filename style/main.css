@@ -205,9 +205,9 @@ section.beer-wrapper .beer .inner .bubble {
   }
 
 
-@keyframes fill {
-  100% {
-    bottom: -5%;
+  @keyframes fill {
+    100% {
+      bottom: -5%;
+    }
   }
-}
 }
