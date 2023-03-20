@@ -2,6 +2,7 @@ import Component from "../cores/Component.js";
 
 export default class Bubble extends Component {
   constructor(target, element) {
+    console.log("Bubble");
     super(target, element);
     this.setStyle();
   }

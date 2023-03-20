@@ -3,6 +3,7 @@ import $ from "./Utils.js";
 
 export default class LandingController {
   constructor() {
+    console.log("LandingController");
     this.addBubbles(70);
     this.setStartButtonEvent();
   }
