@@ -27,7 +27,7 @@ section.title {
     titleFloating 2s 4s infinite alternate;
   opacity: 1;
   z-index: 3;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 
 section.title h1 {
@@ -90,7 +90,7 @@ section.start-btn-wrapper {
   z-index: 3;
   animation: buttonApper 1s 2.5s forwards;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 
 section.start-btn-wrapper:hover {
@@ -151,7 +151,7 @@ section.beer-wrapper {
   bottom: -100vh;
   animation: fill 1.5s 1.2s forwards;
   z-index: 2;
-  transition: all 1.5s;
+  transition: bottom, transform 1.5s;
 }
 
 @keyframes fill {
