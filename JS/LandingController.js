@@ -1,24 +1,11 @@
 import Bubble from "./components/Bubble.js";
-import $ from "./Utils.js";
+import { $ } from "./Utils.js";
 
 export default class LandingController {
-  constructor() {
-    console.log("LandingController");
-    this.addBubbles(70);
-    this.changeToTestPage();
-  }
   addBubbles(amount) {
-    const $inner = $(".inner");
     for (let i = 0; i < amount; i++) {
-      new Bubble($inner, "span");
+      new Bubble($(".inner"), "span", null, "bubble");
     }
-  }
-  changeToTestPage() {
-    const $startBtn = $(".start-btn");
-    $startBtn.addEventListener("click", () => {
-      console.log("start");
-      this.removeLandingPage();
-    });
   }
   removeLandingPage() {
     const $beer = $("section.beer-wrapper");
@@ -33,13 +20,5 @@ export default class LandingController {
       $title.remove();
       $startBtnWrapper.remove();
     }, 1000);
-
-    setTimeout(() => {
-      $beer.style.transform = "translateY(75%)";
-    }, 3000);
-
-    setTimeout(() => {
-      $beer.style.transform = "translateY(66%)";
-    }, 5000);
   }
 }
