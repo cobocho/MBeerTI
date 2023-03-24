@@ -227,6 +227,17 @@ section.beer-wrapper .beer .inner .bubble {
 }
 
 @media (max-width: 800px) {
+  section.title {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(20deg);
+    transform-origin: center center;
+    animation: titleAppear 1s 2.5s forwards,
+      titleFloating 2s 4s infinite alternate;
+    transition: transform 0.5s;
+  }
+
   section.title h1 {
     font-size: 24vw;
   }
