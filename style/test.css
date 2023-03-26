@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
 .test-wrapper {
   display: flex;
   flex-direction: column;
   width: 95vw;
   height: 100%;
-  margin: 0 2.5vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,6 +46,11 @@
 
 
 @media (max-width: 1000px) {
+  .test-wrapper {
+    height: calc(100vh - 20vw);
+    margin: 10vw 2.5vw;
+  }
+
   .test-wrapper .question {
     height: 15vh;
     font-size: 10vw;

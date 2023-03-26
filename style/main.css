@@ -5,6 +5,7 @@
   font-style: normal;
 }
 
+
 body {
   width: 100vw;
   height: 100vh;
@@ -189,16 +190,13 @@ section.beer-wrapper .beer .inner .bubble {
   aspect-ratio: 1/1;
   border-radius: 50%;
   position: absolute;
-  bottom: -80px;
+  bottom: 0px;
   border: 1px solid rgb(254, 214, 127);
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
 
 @keyframes yMove {
-  0% {
-    bottom: -50px;
-  }
   100% {
     bottom: 110%;
   }
