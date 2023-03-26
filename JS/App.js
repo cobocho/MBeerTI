@@ -19,6 +19,10 @@ class App {
     this.landingController.removeLandingPage();
     this.testController.setFirstTest();
   }
+  turnToResultPage(result) {
+    this.testController.removeTestPage();
+    console.log(result);
+  }
 }
 
 const app = new App();

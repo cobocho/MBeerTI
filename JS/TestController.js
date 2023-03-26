@@ -1,6 +1,7 @@
 import { QUESTIONS, TYPE_QUESTIONS } from "./Questions.js";
 import TestWrapper from "./components/test-components/TestWrapper.js";
 import { $ } from "./Utils.js";
+import app from "./App.js";
 
 export default class TestController {
   constructor() {
@@ -53,7 +54,7 @@ export default class TestController {
 
   increaseSeq() {
     this.state.seq++;
-    $(".beer-wrapper").style.transform = `translateY(${100 - 12.5 * this.state.seq}%)`;
+    $(".beer-wrapper").style.transform = `translateY(${100 - 14.28 * this.state.seq}%)`;
   }
 
   setCategory(seq) {
@@ -76,7 +77,15 @@ export default class TestController {
     this.increaseSeq();
     this.state.result = result;
 
-    console.log("result");
-    console.log(this.state);
+    app.turnToResultPage(this.state.result);
+  }
+
+  removeTestPage() {
+    // setTimeout(() => {
+    const $beer = $("section.beer-wrapper");
+    const $test = $("section.test-wrapper");
+    $beer.style.transform = "translateY(100%)";
+    $test.style.transform = "translateY(100%)";
+    // }, 2000);
   }
 }

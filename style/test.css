@@ -11,6 +11,7 @@
   text-align: center;
   word-break: keep-all;
   z-index: 4;
+  transition: transform 1.5s;
 }
 
 
