@@ -32,16 +32,23 @@ export default class TestController {
   changeQuestion(input) {
     this.increaseSeq();
     $(".test-wrapper").remove();
+
     if (this.state.seq < 6) {
       this.countScore(input);
       this.setCategory(this.state.seq);
       this.setTest(this.state.seq);
-    } else if (this.state.seq === 6) {
+    }
+
+    if (this.state.seq === 6) {
+      this.countScore(input);
       this.setType();
       this.setTypeTest("base");
-    } else if (this.state.seq === 7) {
+    }
+
+    if (this.state.seq === 7) {
       this.setTypeTest(input);
     }
+    console.log(this.state);
   }
 
   increaseSeq() {
@@ -63,5 +70,13 @@ export default class TestController {
     else if (ibu > 0 && malty < 0) this.state.type = "type2";
     else if (ibu < 0 && malty > 0) this.state.type = "type3";
     else if (ibu < 0 && malty < 0) this.state.type = "type4";
+  }
+
+  setResult(result) {
+    this.increaseSeq();
+    this.state.result = result;
+
+    console.log("result");
+    console.log(this.state);
   }
 }

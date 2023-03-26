@@ -48,11 +48,17 @@ export const TYPE_QUESTIONS = {
     },
     plus: {
       question: "당신의 취향은?",
-      options: ["수 많은 맛이 느껴지는 강렬한 맥주!", "깔끌하게 떨어지는 맥주!"],
+      options: [
+        { result: "Imperial", desc: "수 많은 맛이 느껴지는 강렬한 맥주!" },
+        { result: "Stout", desc: "깔끌하게 떨어지는 맥주!" },
+      ],
     },
     minus: {
       question: "당신의 취향은?",
-      options: ["묵직하면서 맛의 밸런스도 맞는 맥주!", "강렬한 흑보리를 느낄 수 있는 맥주!"],
+      options: [
+        { result: "Porter", desc: "묵직하면서 맛의 밸런스도 맞는 맥주!" },
+        { result: "Dunkel", desc: "강렬한 흑보리를 느낄 수 있는 맥주!" },
+      ],
     },
   },
   type2: {
@@ -62,11 +68,17 @@ export const TYPE_QUESTIONS = {
     },
     plus: {
       question: "씁쓸한 맥주가 취향인가요?",
-      options: ["맥주는 써야 제맛!", "쓴 맛 보다는 향이 더 중요해!"],
+      options: [
+        { result: "IPA", desc: "맥주는 써야 제맛!" },
+        { result: "Neweng", desc: "쓴 맛 보다는 향이 더 중요해!" },
+      ],
     },
     minus: {
       question: "씁쓸한 맥주가 취향인가요?",
-      options: ["맥주는 써야 제맛!", "쓴 맛 보다는 보편적인 맥주가 취향!"],
+      options: [
+        { result: "Pilser", desc: "맥주는 써야 제맛!" },
+        { result: "PaleAle", desc: "쓴 맛 보다는 보편적인 맥주가 취향!" },
+      ],
     },
   },
   type3: {
@@ -76,11 +88,17 @@ export const TYPE_QUESTIONS = {
     },
     plus: {
       question: "당신의 취향은?",
-      options: ["부드럽고 과일향이 강한 맥주!", "맥주 본연의 맛을 느낄 수 있는 맥주"],
+      options: [
+        { result: "Belgian", desc: "부드럽고 과일향이 강한 맥주!" },
+        { result: "PaleLager", desc: "맥주 본연의 맛을 느낄 수 있는 맥주" },
+      ],
     },
     minus: {
       question: "당신의 취향은",
-      options: ["츄하이나 칵테일 같은 달달한 음료같은 맥주!", "특이하면서 생소한 샴페인 같은 맛!"],
+      options: [
+        { result: "Radler", desc: "츄하이나 칵테일 같은 달달한 음료같은 맥주!" },
+        { result: "Geuze", desc: "특이하면서 생소한 샴페인 같은 맛!" },
+      ],
     },
   },
   type4: {
@@ -90,11 +108,17 @@ export const TYPE_QUESTIONS = {
     },
     plus: {
       question: "당신의 취향은?",
-      options: ["목넘김과 맛이 깔끔한 맥주!", "맥주의 재료의 향을 느낄 수 있는 맥주"],
+      options: [
+        { result: "LightLager", desc: "목넘김과 맛이 깔끔한 맥주!" },
+        { result: "Weizen", desc: "맥주의 재료의 향을 느낄 수 있는 맥주" },
+      ],
     },
     minus: {
       question: "약간 씁쓸한 맥주도 괜찮나요?",
-      options: ["어느정도 씁쓸한건 괜찮아!", "최대한 쓰지 않았으면 좋겠어!"],
+      options: [
+        { result: "Bock", desc: "어느정도 씁쓸한건 괜찮아!" },
+        { result: "DarkLager", desc: "최대한 쓰지 않았으면 좋겠어!" },
+      ],
     },
   },
 };

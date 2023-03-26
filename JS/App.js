@@ -5,7 +5,7 @@ import { $ } from "./Utils.js";
 class App {
   constructor() {
     this.landingController = new LandingController();
-    this.testController = new TestController(this.state);
+    this.testController = new TestController();
     this.init();
   }
   init() {
