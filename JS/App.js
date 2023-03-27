@@ -31,9 +31,8 @@ class App {
       this.resultController.setLoading();
     }, 1500);
     setTimeout(() => {
-      this.resultController.redirect();
+      this.resultController.redirect(result);
     }, 6000);
-    console.log(result);
   }
 }
 

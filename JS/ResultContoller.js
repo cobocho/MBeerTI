@@ -27,7 +27,7 @@ export default class ResultController {
     const idx = Math.floor(Math.random() * LOADING_DESCRIPTIONS.length);
     $(".loading-desc").textContent = LOADING_DESCRIPTIONS[idx];
   }
-  redirect() {
-    location.href = "./result/test.html";
+  redirect(result) {
+    location.href = `./result/test.html?id=${result}`;
   }
 }

@@ -12,19 +12,19 @@ export const QUESTIONS = [
     seq: 1,
     question: "맥주에 어울리는 향은 무엇이라 생각하나요?",
     category: MALTY,
-    options: ["커피를 마시는 것처럼 풍겨오는 깊고 묵직한 향!", "달달한 하이볼이나 칵테일!"],
+    options: ["커피를 마시는 것처럼 풍겨오는 깊고 묵직한 향!", "허브나 과일같이 산뜻한 향!"],
   },
   {
     seq: 2,
     question: "만약 맥주가 없다면 나의 대안은?",
     category: IBU,
-    options: ["한국인은 소주!", "음료수처럼 깔끔하게 떨어지는 맛"],
+    options: ["한국인은 소주!", "달달한 하이볼이나 칵테일!"],
   },
   {
     seq: 3,
     question: "나의 카페 최애 메뉴는?",
     category: MALTY,
-    options: ["코를 행복하게 해주는 에스프레소 기반 메뉴", "신선한 생과일 스무디나 에이드"],
+    options: ["코를 행복하게 해주는 에스프레소 기반 메뉴!", "신선한 생과일 스무디나 에이드!"],
   },
   {
     seq: 4,
@@ -36,7 +36,7 @@ export const QUESTIONS = [
     seq: 5,
     question: "집에 있는데 갈증이 난다! 편의점에서 어떤걸 사올까?",
     category: MALTY,
-    options: ["한국인은 소주!", "달달한 하이볼이나 칵테일!"],
+    options: ["향이 좋은 보리차나 옥수수수염차!", "갈증 해소에는 탄산음료!"],
   },
 ];
 
