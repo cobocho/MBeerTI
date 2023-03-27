@@ -24,8 +24,11 @@ class App {
   turnToResultPage(result) {
     this.testController.removeTestPage();
     setTimeout(() => {
-      this.resultController.setBackgroundMarquee();
-    }, 2000);
+      this.resultController.setLoading();
+    }, 1500);
+    setTimeout(() => {
+      this.resultController.redirect();
+    }, 6000);
     console.log(result);
   }
 }
