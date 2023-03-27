@@ -5,11 +5,15 @@ import app from "../../App.js";
 export default class Options extends Component {
   constructor(target, element, state, className) {
     super(target, element, state, className);
+    this.clickable = true;
     this.addEvent();
   }
   addEvent() {
-    function clickOption(event) {
-      if (!event.target.closest(".option")) return;
+    const clickOption = (event) => {
+      if (!event.target.closest(".option") || !this.clickable) {
+        return;
+      }
+      this.clickable = false;
 
       if (this.state.seq === 7) {
         app.testController.setResult(event.target.closest(".option").id);
@@ -19,9 +23,10 @@ export default class Options extends Component {
       const isPlus = event.target.closest(".option").classList.contains("plus");
 
       app.testController.changeQuestion(isPlus ? "plus" : "minus");
-    }
+      this.clickable = true;
+    };
 
-    this.$element.addEventListener("click", clickOption.bind(this), { once: true });
+    this.$element.addEventListener("click", clickOption);
   }
   mount() {
     if (this.state.seq === 7) {
