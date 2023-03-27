@@ -81,11 +81,14 @@ export default class TestController {
   }
 
   removeTestPage() {
-    // setTimeout(() => {
     const $beer = $("section.beer-wrapper");
     const $test = $("section.test-wrapper");
     $beer.style.transform = "translateY(100%)";
-    $test.style.transform = "translateY(100%)";
-    // }, 2000);
+    $test.style.transform = "translateY(120%)";
+
+    setTimeout(() => {
+      $beer.remove();
+      $test.remove();
+    }, 1500);
   }
 }

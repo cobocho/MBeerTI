@@ -1,4 +1,5 @@
 import LandingController from "./LandingController.js";
+import ResultController from "./ResultContoller.js";
 import TestController from "./TestController.js";
 import { $ } from "./Utils.js";
 
@@ -6,6 +7,7 @@ class App {
   constructor() {
     this.landingController = new LandingController();
     this.testController = new TestController();
+    this.resultController = new ResultController();
     this.init();
   }
   init() {
@@ -21,6 +23,9 @@ class App {
   }
   turnToResultPage(result) {
     this.testController.removeTestPage();
+    setTimeout(() => {
+      this.resultController.setBackgroundMarquee();
+    }, 2000);
     console.log(result);
   }
 }
