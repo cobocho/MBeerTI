@@ -12,9 +12,13 @@ class App {
   }
   init() {
     const $startBtn = $(".start-btn");
-    $startBtn.addEventListener("click", () => {
-      this.turnToTestPage();
-    });
+    $startBtn.addEventListener(
+      "click",
+      () => {
+        this.turnToTestPage();
+      },
+      { once: true }
+    );
     this.landingController.addBubbles(70);
   }
   turnToTestPage() {

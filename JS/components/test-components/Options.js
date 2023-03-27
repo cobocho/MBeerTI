@@ -8,7 +8,7 @@ export default class Options extends Component {
     this.addEvent();
   }
   addEvent() {
-    this.$element.addEventListener("click", (event) => {
+    function clickOption(event) {
       if (!event.target.closest(".option")) return;
 
       if (this.state.seq === 7) {
@@ -19,7 +19,9 @@ export default class Options extends Component {
       const isPlus = event.target.closest(".option").classList.contains("plus");
 
       app.testController.changeQuestion(isPlus ? "plus" : "minus");
-    });
+    }
+
+    this.$element.addEventListener("click", clickOption.bind(this), { once: true });
   }
   mount() {
     if (this.state.seq === 7) {
