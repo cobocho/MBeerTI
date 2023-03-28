@@ -1,4 +1,4 @@
-import { QUESTIONS, TYPE_QUESTIONS } from "./Questions.js";
+import { QUESTIONS, TYPE_QUESTIONS } from "./constants/Questions.js";
 import TestWrapper from "./components/test-components/TestWrapper.js";
 import { $ } from "./Utils.js";
 import app from "./App.js";
