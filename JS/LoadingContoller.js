@@ -20,7 +20,7 @@ const LOADING_DESCRIPTIONS = [
   "맥주가 넘치지 않도록 따르는 중...",
 ];
 
-export default class ResultController {
+export default class LoadingController {
   constructor() {}
   setLoading() {
     $("body").insertAdjacentHTML("beforeend", LoadingComponent);
@@ -28,6 +28,6 @@ export default class ResultController {
     $(".loading-desc").textContent = LOADING_DESCRIPTIONS[idx];
   }
   redirect(result) {
-    location.href = `./result/test.html?id=${result}`;
+    location.href = `./result.html?id=${result}`;
   }
 }

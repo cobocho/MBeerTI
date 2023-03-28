@@ -1,5 +1,5 @@
 import LandingController from "./LandingController.js";
-import ResultController from "./ResultContoller.js";
+import LoadingContoller from "./LoadingContoller.js";
 import TestController from "./TestController.js";
 import { $ } from "./Utils.js";
 
@@ -7,7 +7,8 @@ class App {
   constructor() {
     this.landingController = new LandingController();
     this.testController = new TestController();
-    this.resultController = new ResultController();
+    this.loadingContoller = new LoadingContoller();
+    this.result = null;
     this.init();
   }
   init() {
@@ -25,13 +26,14 @@ class App {
     this.landingController.removeLandingPage();
     this.testController.setFirstTest();
   }
-  turnToResultPage(result) {
+  turnToResultPage(userInput) {
+    this.result = userInput;
     this.testController.removeTestPage();
     setTimeout(() => {
-      this.resultController.setLoading();
+      this.loadingContoller.setLoading();
     }, 1500);
     setTimeout(() => {
-      this.resultController.redirect(result);
+      this.loadingContoller.redirect(this.result);
     }, 6000);
   }
 }

@@ -77,7 +77,7 @@ export default class TestController {
     this.increaseSeq();
     this.state.result = result;
 
-    app.turnToResultPage(this.state.result);
+    app.turnToResultPage(this.state);
   }
 
   removeTestPage() {
