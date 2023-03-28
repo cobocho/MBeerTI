@@ -74,21 +74,6 @@ export default class TestController {
   }
 
   setResult(result) {
-    this.increaseSeq();
-    this.state.result = result;
-
-    app.turnToResultPage(this.state);
-  }
-
-  removeTestPage() {
-    const $beer = $("section.beer-wrapper");
-    const $test = $("section.test-wrapper");
-    $beer.style.transform = "translateY(100%)";
-    $test.style.transform = "translateY(120%)";
-
-    setTimeout(() => {
-      $beer.remove();
-      $test.remove();
-    }, 1500);
+    app.turnToResultPage(result);
   }
 }

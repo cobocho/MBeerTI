@@ -8,7 +8,6 @@ class App {
     this.landingController = new LandingController();
     this.testController = new TestController();
     this.loadingContoller = new LoadingContoller();
-    this.result = null;
     this.init();
   }
   init() {
@@ -20,20 +19,25 @@ class App {
       },
       { once: true }
     );
-    this.landingController.addBubbles(70);
+    this.landingController.addBubbles(40);
   }
   turnToTestPage() {
     this.landingController.removeLandingPage();
     this.testController.setFirstTest();
   }
-  turnToResultPage(userInput) {
-    this.result = userInput;
-    this.testController.removeTestPage();
+  turnToResultPage(result) {
+    const $beer = $("section.beer-wrapper");
+    const $test = $("section.test-wrapper");
+    $beer.style.transform = "translateY(100%)";
+    $test.style.transform = "translateY(120%)";
+
     setTimeout(() => {
+      $beer.remove();
+      $test.remove();
       this.loadingContoller.setLoading();
     }, 1500);
     setTimeout(() => {
-      this.loadingContoller.redirect(this.result);
+      this.loadingContoller.redirect(result);
     }, 6000);
   }
 }
