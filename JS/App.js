@@ -37,7 +37,7 @@ class App {
       this.loadingContoller.setLoading();
     }, 1500);
     setTimeout(() => {
-      this.loadingContoller.redirect(result);
+      this.loadingContoller.direct(result);
     }, 6000);
   }
 }

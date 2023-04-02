@@ -16,40 +16,18 @@ export default class TestController {
   }
 
   setFirstTest() {
-    this.state.currentCategory = QUESTIONS[this.state.seq].category;
+    this.setCategory();
     setTimeout(() => {
       new TestWrapper($("body"), "section", QUESTIONS[0], "test-wrapper");
     }, 2500);
   }
 
-  setTest(seq) {
-    new TestWrapper($("body"), "section", QUESTIONS[seq], "test-wrapper");
+  setTest() {
+    new TestWrapper($("body"), "section", QUESTIONS[this.state.seq], "test-wrapper");
   }
 
   setTypeTest(input) {
     new TestWrapper($("body"), "section", { seq: this.state.seq, ...TYPE_QUESTIONS[this.state.type][input] }, "test-wrapper");
-  }
-
-  changeQuestion(input) {
-    this.increaseSeq();
-    $(".test-wrapper").remove();
-
-    if (this.state.seq < 6) {
-      this.countScore(input);
-      this.setCategory(this.state.seq);
-      this.setTest(this.state.seq);
-    }
-
-    if (this.state.seq === 6) {
-      this.countScore(input);
-      this.setType();
-      this.setTypeTest("base");
-    }
-
-    if (this.state.seq === 7) {
-      this.setTypeTest(input);
-    }
-    console.log(this.state);
   }
 
   increaseSeq() {
@@ -57,12 +35,12 @@ export default class TestController {
     $(".beer-wrapper").style.transform = `translateY(${100 - 14.28 * this.state.seq}%)`;
   }
 
-  setCategory(seq) {
-    this.state.currentCategory = QUESTIONS[seq].category;
-  }
-
   countScore(input) {
     input === "plus" ? this.state[this.state.currentCategory]++ : this.state[this.state.currentCategory]--;
+  }
+
+  setCategory() {
+    this.state.currentCategory = QUESTIONS[this.state.seq].category;
   }
 
   setType() {
@@ -75,5 +53,26 @@ export default class TestController {
 
   setResult(result) {
     app.turnToResultPage(result);
+  }
+
+  changeQuestion(input) {
+    this.increaseSeq();
+    $(".test-wrapper").remove();
+
+    if (this.state.seq < 6) {
+      this.countScore(input);
+      this.setCategory();
+      this.setTest();
+    }
+
+    if (this.state.seq === 6) {
+      this.countScore(input);
+      this.setType();
+      this.setTypeTest("base");
+    }
+
+    if (this.state.seq === 7) {
+      this.setTypeTest(input);
+    }
   }
 }
