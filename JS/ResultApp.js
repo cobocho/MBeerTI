@@ -12,7 +12,6 @@ class App {
     const name = urlParams.get("id");
     this.#result = BeerList.find(({ id }) => id === name);
     this.addBubbles(50);
-    console.log(this.#result);
     this.changeBeerData();
     this.addEvent();
   }
@@ -51,7 +50,9 @@ class App {
     $(".beer-graphic").style.backgroundColor = this.#result.color;
   }
   addEvent() {
-    $(".other-result");
+    $(".other-result").addEventListener("click", () => {
+      location.href = `result.html?id=${this.#result.other}`;
+    });
     $(".retry").addEventListener("click", () => {
       location.href = `/`;
     });

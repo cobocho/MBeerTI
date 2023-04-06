@@ -56,8 +56,8 @@ export const TYPE_QUESTIONS = {
     minus: {
       question: "당신의 취향은?",
       options: [
+        { result: "Schwarzbier", desc: "깔끔하게 떨어지는 쌉쌀한 맥주!" },
         { result: "Porter", desc: "묵직하면서 맛의 밸런스도 맞는 맥주!" },
-        { result: "Dunkel", desc: "강렬한 흑보리를 느낄 수 있는 맥주!" },
       ],
     },
   },
@@ -117,7 +117,7 @@ export const TYPE_QUESTIONS = {
       question: "약간 씁쓸한 맥주도 괜찮나요?",
       options: [
         { result: "Bock", desc: "어느정도 씁쓸한건 괜찮아!" },
-        { result: "DarkLager", desc: "최대한 쓰지 않았으면 좋겠어!" },
+        { result: "Dunkel", desc: "최대한 쓰지 않았으면 좋겠어!" },
       ],
     },
   },

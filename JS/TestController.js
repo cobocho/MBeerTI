@@ -47,8 +47,8 @@ export default class TestController {
     const { ibu, malty } = this.state;
     if (ibu > 0 && malty > 0) this.state.type = "type1";
     else if (ibu > 0 && malty < 0) this.state.type = "type2";
-    else if (ibu < 0 && malty > 0) this.state.type = "type3";
-    else if (ibu < 0 && malty < 0) this.state.type = "type4";
+    else if (ibu < 0 && malty < 0) this.state.type = "type3";
+    else if (ibu < 0 && malty > 0) this.state.type = "type4";
   }
 
   setResult(result) {

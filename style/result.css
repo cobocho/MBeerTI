@@ -6,7 +6,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(247, 202, 0);
 }
 
 hr {
@@ -23,7 +22,7 @@ hr {
 
 .result {
   width: 1200px;
-  height: 70vh;
+  height: 720px;
   border-radius: 15px;
   background-color: #fff;
   overflow: hidden;
@@ -75,13 +74,13 @@ hr {
 .result .beer-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 5fr 1fr;
-  grid-gap: 40px;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
   grid-template-areas: 
     'a b'
     'c c';
   height: 95%;
-  padding: 80px 50px;
+  padding: 40px 50px;
 }
 
 .result .beer-info .beer-image {
@@ -131,7 +130,7 @@ hr {
 .result .beer-info .beer-image .beer-cup-backdrop {
   height: 80%;
   width: 180px;
-  background-color: rgb(183, 255, 255, 0.04);
+  background-color: rgb(183, 255, 255, 0.1);
   position: absolute;
 }
 
@@ -279,7 +278,7 @@ hr {
 
 .beer-buttons button {
   font-family: 'Nanum Gothic', sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
   background-color: #7a7a7a;
   color: #fff;
@@ -332,7 +331,7 @@ hr {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .result {
     width: 90%;
     height: 86vh;
@@ -356,7 +355,7 @@ hr {
   }
 
   .result .beer-info .beer-image .beer-graphic {
-    width: 100px;
+    width: 30%;
   }
 
   .result .beer-info .beer-image .beer-cup-backdrop {

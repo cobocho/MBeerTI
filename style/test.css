@@ -70,7 +70,9 @@
 .test-wrapper .options .option p {
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
+  line-height: 1.5;
   font-size: 3vw;
+  word-break: keep-all;
 }
 
 
