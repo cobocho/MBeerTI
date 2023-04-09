@@ -53,7 +53,7 @@ class App {
   }
   addEvent() {
     $(".other-result").addEventListener("click", () => {
-      location.href = `/MBeerTI/result?id=${this.#result.other}`;
+      location.href = `MBeerTI/result?id=${this.#result.other}`;
     });
     $(".retry").addEventListener("click", () => {
       location.href = "/MBeerTI";
