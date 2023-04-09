@@ -8,6 +8,6 @@ export default class LoadingController {
     new Loading($("body"), "div", LOADING_DESCRIPTIONS[idx], "loading");
   }
   direct(result) {
-    location.href = `./result.html?id=${result}`;
+    location.href = `./result?id=${result}`;
   }
 }

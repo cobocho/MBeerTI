@@ -36,6 +36,7 @@ class App {
       $test.remove();
       this.loadingContoller.setLoading();
     }, 1500);
+
     setTimeout(() => {
       this.loadingContoller.direct(result);
     }, 6000);

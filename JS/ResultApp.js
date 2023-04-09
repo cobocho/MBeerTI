@@ -11,6 +11,8 @@ class App {
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get("id");
     this.#result = BeerList.find(({ id }) => id === name);
+    if (!this.#result) {
+    }
     this.addBubbles(50);
     this.changeBeerData();
     this.addEvent();
@@ -51,10 +53,10 @@ class App {
   }
   addEvent() {
     $(".other-result").addEventListener("click", () => {
-      location.href = `result.html?id=${this.#result.other}`;
+      location.href = `result?id=${this.#result.other}`;
     });
     $(".retry").addEventListener("click", () => {
-      location.href = `/`;
+      location.href = `/MBeerTI`;
     });
   }
 }
