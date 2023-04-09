@@ -53,10 +53,12 @@ class App {
   }
   addEvent() {
     $(".other-result").addEventListener("click", () => {
-      location.href = `result?id=${this.#result.other}`;
+      console.log("/result");
+      location.href = `/result?id=${this.#result.other}`;
     });
     $(".retry").addEventListener("click", () => {
-      location.href = `/MBeerTI`;
+      console.log("/MBeerTI");
+      location.href = "/MBeerTI";
     });
   }
 }
