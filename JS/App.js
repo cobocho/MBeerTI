@@ -20,6 +20,12 @@ class App {
       { once: true }
     );
     this.landingController.addBubbles(40);
+    this.preLoadImg();
+  }
+  preLoadImg() {
+    const img = new Image();
+    img.src = "../src/image/loading-mug.png";
+    // console.log(img);
   }
   turnToTestPage() {
     this.landingController.removeLandingPage();
