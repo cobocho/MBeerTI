@@ -50,7 +50,7 @@ export const TYPE_QUESTIONS = {
       question: "당신의 취향은?",
       options: [
         { result: "Imperial", desc: "수 많은 맛이 느껴지는 강렬한 맥주!" },
-        { result: "Stout", desc: "깔끌하게 떨어지는 맥주!" },
+        { result: "Stout", desc: "깔끔하게 떨어지는 맥주!" },
       ],
     },
     minus: {

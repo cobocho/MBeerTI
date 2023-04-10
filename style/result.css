@@ -331,6 +331,18 @@ hr {
   }
 }
 
+
+@media (min-height: 560px) {
+  .result {
+    width: 90%;
+    height: 86vh;
+  }
+
+  .result .beer-info {
+    overflow: scroll;
+  }
+}
+
 @media (max-width: 1200px) {
   .result {
     width: 90%;

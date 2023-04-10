@@ -9,5 +9,7 @@ export default class LoadingController {
   }
   direct(result) {
     location.href = `./result?id=${result}`;
+
+    // location.href = `./result.html?id=${result}`;
   }
 }

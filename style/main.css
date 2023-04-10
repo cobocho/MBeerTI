@@ -173,7 +173,6 @@ section.start-btn-wrapper:hover .start-btn-backdrop {
   transform: scale(1.3);
   cursor: pointer;
 }
-
 @media (max-width: 800px) {
   section.title {
     position: fixed;
@@ -184,6 +183,10 @@ section.start-btn-wrapper:hover .start-btn-backdrop {
     animation: titleAppear 1s 2.5s forwards,
       titleFloating 2s 4s infinite alternate;
     transition: transform 0.5s;
+  }
+
+  @keyframes mobileTitleAppear {
+    
   }
 
   section.title h1 {

@@ -53,9 +53,11 @@ class App {
   }
   addEvent() {
     $(".other-result").addEventListener("click", () => {
+      // location.href = `/result.html?id=${this.#result.other}`;
       location.href = `https://cobocho.github.io/MBeerTI/result?id=${this.#result.other}`;
     });
     $(".retry").addEventListener("click", () => {
+      // location.href = "/";
       location.href = "/MBeerTI";
     });
   }
