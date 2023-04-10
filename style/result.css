@@ -332,7 +332,7 @@ hr {
 }
 
 
-@media (min-height: 560px) {
+@media (min-width: 800px) and (max-width: 1200px) {
   .result {
     width: 90%;
     height: 86vh;
@@ -341,9 +341,27 @@ hr {
   .result .beer-info {
     overflow: scroll;
   }
+
+  .result .beer-info .beer-image {
+    width: 500px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .result .beer-info .beer-image .beer-cup {
+    height: 100%;
+  }
+
+  .result .beer-info .beer-image .beer-graphic {
+    height: 400px;
+  }
+
+  .result .beer-info .beer-image .beer-cup-backdrop {
+    width: 180px;
+  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .result {
     width: 90%;
     height: 86vh;
@@ -371,7 +389,7 @@ hr {
   }
 
   .result .beer-info .beer-image .beer-cup-backdrop {
-    width: 100px;
+    width: 30%;
   }
 
   .result .beer-info .beer-image .beer-cup {
