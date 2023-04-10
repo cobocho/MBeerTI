@@ -81,6 +81,7 @@ hr {
     'c c';
   height: 95%;
   padding: 40px 50px;
+  overflow: scroll;
 }
 
 .result .beer-info .beer-image {
@@ -331,6 +332,11 @@ hr {
   }
 }
 
+@media (max-height: 600px) {
+  .result {
+    height: 80vh;
+  }
+}
 
 @media (min-width: 800px) and (max-width: 1200px) {
   .result {
