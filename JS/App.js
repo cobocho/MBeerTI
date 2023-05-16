@@ -1,7 +1,7 @@
-import LandingController from "./LandingController.js";
-import LoadingContoller from "./LoadingContoller.js";
-import TestController from "./TestController.js";
-import { $ } from "./Utils.js";
+import LandingController from './LandingController.js';
+import LoadingContoller from './LoadingContoller.js';
+import TestController from './TestController.js';
+import { $ } from './Utils.js';
 
 class App {
   constructor() {
@@ -11,9 +11,9 @@ class App {
     this.init();
   }
   init() {
-    const $startBtn = $(".start-btn");
+    const $startBtn = $('.start-btn');
     $startBtn.addEventListener(
-      "click",
+      'click',
       () => {
         this.turnToTestPage();
       },
@@ -24,18 +24,17 @@ class App {
   }
   preLoadImg() {
     const img = new Image();
-    img.src = "../src/image/loading-mug.png";
-    // console.log(img);
+    img.src = '../src/image/loading-mug.png';
   }
   turnToTestPage() {
     this.landingController.removeLandingPage();
     this.testController.setFirstTest();
   }
   turnToResultPage(result) {
-    const $beer = $("section.beer-wrapper");
-    const $test = $("section.test-wrapper");
-    $beer.style.transform = "translateY(100%)";
-    $test.style.transform = "translateY(120%)";
+    const $beer = $('section.beer-wrapper');
+    const $test = $('section.test-wrapper');
+    $beer.style.transform = 'translateY(100%)';
+    $test.style.transform = 'translateY(120%)';
 
     setTimeout(() => {
       $beer.remove();
