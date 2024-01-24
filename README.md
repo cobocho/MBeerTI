@@ -1,52 +1,30 @@
-# 🍺 프로젝트 소개
-나의 주관적인 입맛에 따라 나의 취향에 가장 맞는 스타일의 맥주를 알려주는 웹사이트입니다.
+# React + TypeScript + Vite
 
-</br>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# 🔗 URL
-https://mbeerti.netlify.app/
+Currently, two official plugins are available:
 
-</br>
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Expanding the ESLint configuration
 
-# 🗓️ 작업 기간
-`2023/03/17` ~ `2023/04/12`
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-</br>
+- Configure the top-level `parserOptions` property like this:
 
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-# 🏞️ 프로젝트 미리보기
-
-<table>
-  <tr>
-    <td width="300px">
-      <img src="/README/Main_Page.gif" style="width: 100%; height: auto;" alt="메인 페이지"/>
-    </td>
-    <td width="300px">
-      <img src="/README/Test_Page.gif" style="width: 100%; height: auto;" alt="테스트 페이지"/>
-    </td>
-    <td width="300px">
-      <img src="/README/Result_Page.gif" style="width: 100%; height: auto;" alt="결과 페이지"/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-        <b>메인 페이지</b>
-    </td>
-    <td align="center">
-        <b>테스트 페이지</b>
-    </td>
-    <td align="center">
-        <b>결과 페이지</b>
-    </td>
-  </tr>
-</table>
-
-</br>
-
-
-## 🛠️ 기술 스택
-
-`HTML` `CSS` `Javascript(es6+)`
-
-</br>
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
